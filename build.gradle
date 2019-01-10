@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+		maven {url 'https://maven.google.com'}
+		maven { url "https://jitpack.io" }//必须添加这行
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+//        classpath 'com.novoda:bintray-release:0.5.0'
+		classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+	}
+}
+
+allprojects {
+    repositories {
+        jcenter()
+		maven {url 'https://maven.google.com'}
+		maven { url "https://jitpack.io" }//必须添加这行
+    }
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
