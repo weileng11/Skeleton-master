@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+//https://github.com/willowtreeapps/spruce-android 带动画
 //https://github.com/ethanhua/Skeleton
 //http://www.sohu.com/a/278677153_739982
 public class MainActivity extends AppCompatActivity {
